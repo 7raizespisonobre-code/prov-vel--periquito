@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "7 Raízes Piso Nobre",
   description:
