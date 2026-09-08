@@ -8,47 +8,61 @@ export default function Home() {
         </div>
         <nav>
           <a href="#servicos">Serviços</a>
-          <a href="#transformacao">Transformação</a>
-          <a href="#portfolio">Projetos</a>
-          <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="#transformacao">Projetos</a>
+          <a href="#contato">WhatsApp</a>
         </nav>
       </header>
 
-      {/* Hero */}
-      <section className="hero">
-        <div className="hero-text">
-          <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', color: '#655E5A' }}>
-            Cuidado Técnico • Acabamento Impecável
-          </span>
-          <h1 className="font-serif">A Arte do Piso Nobre</h1>
-          <p>
-            Recuperação, restauração e revitalização premium de pisos de madeira. Devolvemos o valor e a sofisticação ao seu ambiente.
+      {/* Hero Section Split (Layout Idêntico ao Mockup) */}
+      <section className="hero-container">
+        {/* Lado Esquerdo: Imagem da Madeira / Escada */}
+        <div className="hero-bg-image" />
+
+        {/* Lado Direito: Texto Moderno e Botões */}
+        <div className="hero-content">
+          <h1 className="hero-title font-serif">
+            A Arte do<br />Piso Nobre
+          </h1>
+          <p className="hero-subtitle">
+            Recuperação, Restauração e Revitalização Premium de Pisos de Madeira.
           </p>
-          <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer" className="btn-primary">
-            Solicitar Avaliação
-          </a>
-        </div>
-        <div>
-          <img src="/imagens/Herói.jpg" alt="Piso Nobre de Madeira" className="hero-img" />
+          <div>
+            <a 
+              href="https://wa.me/5500000000000" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn-main"
+            >
+              Saiba Mais
+            </a>
+            <a 
+              href="https://wa.me/5500000000000" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn-secondary-link"
+            >
+              Ou fale no WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Serviços */}
+      {/* Serviços Especializados */}
       <section id="servicos" className="bg-secondary">
         <div className="section-padding">
           <h2 className="section-title font-serif">Serviços Especializados</h2>
           <div className="grid-3">
-            <div style={{ background: '#FAF8F5', padding: '30px', border: '1px solid #E8E2D9' }}>
-              <h3 className="font-serif" style={{ fontSize: '1.5rem', marginBottom: '10px' }}>01. Raspagem Técnica</h3>
-              <p style={{ fontSize: '0.85rem', color: '#655E5A' }}>Remoção controlada de resíduos antigos e nivelamento preciso da madeira.</p>
+            <div style={{ background: '#FAF8F5', padding: '35px', border: '1px solid #E8E2D9' }}>
+              <h3 className="font-serif" style={{ fontSize: '1.2rem', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>01. Raspagem Técnica</h3>
+              <p style={{ fontSize: '0.85rem', color: '#655E5A', fontWeight: 300 }}>Remoção controlada de resíduos antigos e nivelamento preciso da madeira pura.</p>
             </div>
-            <div style={{ background: '#FAF8F5', padding: '30px', border: '1px solid #E8E2D9' }}>
-              <h3 className="font-serif" style={{ fontSize: '1.5rem', marginBottom: '10px' }}>02. Revitalização</h3>
-              <p style={{ fontSize: '0.85rem', color: '#655E5A' }}>Tratamento dos veios e tonalidades para restaurar o brilho e a presença natural.</p>
+            <div style={{ background: '#FAF8F5', padding: '35px', border: '1px solid #E8E2D9' }}>
+              <h3 className="font-serif" style={{ fontSize: '1.2rem', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>02. Revitalização</h3>
+              <p style={{ fontSize: '0.85rem', color: '#655E5A', fontWeight: 300 }}>Tratamento profundo dos veios para restaurar a cor viva e a nobreza natural.</p>
             </div>
-            <div style={{ background: '#FAF8F5', padding: '30px', border: '1px solid #E8E2D9' }}>
-              <h3 className="font-serif" style={{ fontSize: '1.5rem', marginBottom: '10px' }}>03. Acabamento Nobre</h3>
-              <p style={{ fontSize: '0.85rem', color: '#655E5A' }}>Aplicação de resinas e vernizes de alta resistência com Toque de Ouro/Acetinado.</p>
+            <div style={{ background: '#FAF8F5', padding: '35px', border: '1px solid #E8E2D9' }}>
+              <h3 className="font-serif" style={{ fontSize: '1.2rem', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>03. Acabamento Nobre</h3>
+              <p style={{ fontSize: '0.85rem', color: '#655E5A', fontWeight: 300 }}>Aplicação de resinas e vernizes de alta resistência com toque suave e acetinado.</p>
             </div>
           </div>
         </div>
@@ -64,36 +78,15 @@ export default function Home() {
           </div>
           <div>
             <img src="/imagens/depois-piso-01.jpg" alt="Depois" className="card-img" />
-            <div className="card-caption" style={{ color: '#5A4234', fontWeight: 'bold' }}>Depois — Restauração Concluída</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfólio */}
-      <section id="portfolio" className="bg-secondary">
-        <div className="section-padding">
-          <h2 className="section-title font-serif">A Madeira em Diferentes Espaços</h2>
-          <div className="grid-3">
-            <div>
-              <img src="/imagens/escada-01.jpg" alt="Escada de Madeira" className="card-img" />
-              <div className="card-caption">Escadas e Degraus</div>
-            </div>
-            <div>
-              <img src="/imagens/Ambientes.jpg" alt="Ambiente de Luxo" className="card-img" />
-              <div className="card-caption">Salas e Ambientes Internos</div>
-            </div>
-            <div>
-              <img src="/imagens/depois-piso-02.jpg" alt="Piso Trabalhado" className="card-img" />
-              <div className="card-caption">Tacos e Assoalhos Trabalhados</div>
-            </div>
+            <div className="card-caption" style={{ color: '#5A4234', fontWeight: '600' }}>Depois — Restauração Concluída</div>
           </div>
         </div>
       </section>
 
       {/* Rodapé */}
-      <footer style={{ padding: '40px', textAlign: 'center', borderTop: '1px solid #E8E2D9', fontSize: '0.8rem', color: '#655E5A' }}>
-        © 7 Raízes Piso Nobre — Todos os direitos reservados.
+      <footer id="contato" style={{ padding: '50px 20px', textAlign: 'center', borderTop: '1px solid #E8E2D9', fontSize: '0.75rem', color: '#655E5A', letterSpacing: '1px' }}>
+        © 7 RAÍZES PISO NOBRE — TODOS OS DIREITOS RESERVADOS.
       </footer>
     </div>
   );
-        }
+}
