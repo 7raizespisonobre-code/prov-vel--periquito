@@ -1,384 +1,371 @@
-const services = [
-  {
-    number: "01",
-    title: "Raspagem",
-    text: "Remoção técnica das camadas desgastadas, preparando a madeira para receber uma nova vida.",
-  },
-  {
-    number: "02",
-    title: "Revitalização",
-    text: "Recuperação da aparência e da presença da madeira sem esconder sua identidade natural.",
-  },
-  {
-    number: "03",
-    title: "Acabamento",
-    text: "Proteção e acabamento escolhidos de acordo com o ambiente, uso e resultado desejado.",
-  },
-  {
-    number: "04",
-    title: "Escadas & Decks",
-    text: "Tratamento especializado para estruturas de madeira internas e áreas externas.",
-  },
-];
+const imagens = {
+  hero: "/imagens/Herói.jpg",
 
-const process = [
-  {
-    number: "01",
-    title: "Avaliação",
-    text: "Entendemos o estado atual da madeira e o que pode ser recuperado.",
-  },
-  {
-    number: "02",
-    title: "Preparação",
-    text: "Cada superfície é preparada para receber o tratamento adequado.",
-  },
-  {
-    number: "03",
-    title: "Restauração",
-    text: "Executamos a raspagem, correções e etapas necessárias para recuperar a madeira.",
-  },
-  {
-    number: "04",
-    title: "Acabamento",
-    text: "A última etapa protege a superfície e revela novamente sua beleza.",
-  },
-];
+  antes: [
+    "/imagens/antes-piso-01.jpg",
+    "/imagens/antes-piso-02.jpg",
+  ],
+
+  processo: [
+    "/imagens/processo-raspagem.jpg",
+    "/imagens/processo-raspagem-01 .jpg",
+    "/imagens/processo-raspagem-02.jpg",
+  ],
+
+  depois: [
+    "/imagens/depois-piso.jpg",
+    "/imagens/depois-piso-01.jpg",
+    "/imagens/depois-piso-02.jpg",
+  ],
+
+  ambientes: [
+    "/imagens/ambiente-01.jpg",
+    "/imagens/ambiente-02.jpg",
+    "/imagens/Ambientes.jpg",
+  ],
+
+  escadas: [
+    "/imagens/escada-01.jpg",
+    "/imagens/escada-02.jpg",
+  ],
+
+  detalhes: [
+    "/imagens/detalhes-madeira-02.jpg",
+  ],
+};
 
 export default function Home() {
   return (
     <main>
-      {/* HEADER */}
-      <header className="site-header">
-        <div className="container header-inner">
-          <a href="#" className="brand">
-            <span className="brand-mark">7</span>
-
-            <span className="brand-text">
-              <strong>RAÍZES</strong>
-              <small>PISO NOBRE</small>
-            </span>
-          </a>
-
-          <nav className="desktop-nav">
-            <a href="#servicos">Serviços</a>
-            <a href="#processo">Processo</a>
-            <a href="#resultados">Resultados</a>
-            <a href="#contato">Contato</a>
-          </nav>
-
-          <a href="#contato" className="header-button">
-            Solicitar avaliação
-          </a>
-        </div>
-      </header>
-
       {/* HERO */}
       <section className="hero">
-        <div className="hero-glow" />
-        <div className="hero-line" />
-
-        <div className="container hero-inner">
-          <div className="hero-copy">
-            <div className="eyebrow">
-              Especialistas em madeira
-            </div>
-
-            <h1>
-              A beleza da madeira
-              <span>pode voltar a viver.</span>
-            </h1>
-
-            <p className="hero-description">
-              Raspagem, revitalização e acabamento de pisos de madeira
-              realizados com técnica, cuidado e atenção aos detalhes.
-            </p>
-
-            <div className="hero-actions">
-              <a href="#contato" className="button button-primary">
-                Solicitar avaliação
-                <span>→</span>
-              </a>
-
-              <a href="#resultados" className="button button-ghost">
-                Ver resultados
-              </a>
-            </div>
-
-            <div className="hero-note">
-              <span className="gold-dot" />
-              Pisos • Assoalhos • Escadas • Decks
-            </div>
-          </div>
-
-          {/* ESPAÇO PARA FOTO PRINCIPAL */}
-          <div className="hero-image-placeholder">
-            <div className="placeholder-content">
-              <span>7 RAÍZES</span>
-              <strong>IMAGEM PRINCIPAL</strong>
-              <small>Fotografia real do trabalho</small>
-            </div>
-
-            <div className="image-frame-corner top-left" />
-            <div className="image-frame-corner bottom-right" />
-          </div>
+        <div className="hero-image">
+          <img
+            src={imagens.hero}
+            alt="Piso de madeira restaurado em ambiente sofisticado"
+          />
         </div>
 
-        <div className="hero-bottom">
-          <div className="container hero-bottom-inner">
-            <span>Restauração</span>
-            <span>Precisão</span>
-            <span>Experiência</span>
-            <span>Acabamento</span>
+        <div className="hero-overlay" />
+
+        <div className="hero-content">
+          <p className="eyebrow">7 RAÍZES • PISO NOBRE</p>
+
+          <h1>Seu piso pode voltar a impressionar.</h1>
+
+          <p className="hero-text">
+            Raspagem, restauração, revitalização e acabamento de pisos de
+            madeira com técnica, cuidado e atenção aos detalhes.
+          </p>
+
+          <div className="hero-actions">
+            <a
+              href="https://wa.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-primary"
+            >
+              Solicitar avaliação
+            </a>
+
+            <a href="#servicos" className="button button-secondary">
+              Conhecer serviços
+            </a>
           </div>
         </div>
       </section>
 
-      {/* INTRO */}
+      {/* INTRODUÇÃO */}
       <section className="intro section">
-        <div className="container intro-grid">
-          <div>
-            <span className="eyebrow">O valor da madeira</span>
-
-            <h2>
-              Nem todo piso precisa
-              <span>ser substituído.</span>
-            </h2>
-          </div>
-
-          <div className="intro-text">
-            <p>
-              A madeira envelhece. Ganha marcas, perde brilho, acumula
-              camadas e sofre com os anos de uso.
-            </p>
-
-            <p>
-              Mas, quando sua estrutura ainda permite recuperação, existe
-              outra possibilidade: <strong>restaurar.</strong>
-            </p>
-
-            <p>
-              Nosso trabalho é revelar novamente aquilo que já existe no
-              ambiente.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section id="servicos" className="services section">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">Especialidades</span>
-
-              <h2>
-                Trabalho técnico.
-                <span>Resultado visível.</span>
-              </h2>
-            </div>
-
-            <p>
-              Cada madeira possui características próprias. Por isso,
-              tratamos cada trabalho como um projeto, não como um serviço
-              genérico.
-            </p>
-          </div>
-
-          <div className="service-grid">
-            {services.map((service) => (
-              <article className="service-card" key={service.number}>
-                <span className="card-number">{service.number}</span>
-
-                <div className="service-card-bottom">
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                </div>
-
-                <span className="card-arrow">↗</span>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section id="processo" className="process section">
-        <div className="container">
-          <div className="process-header">
-            <span className="eyebrow">Nosso processo</span>
-
-            <h2>
-              Da primeira avaliação
-              <span>ao último acabamento.</span>
-            </h2>
-          </div>
-
-          <div className="process-grid">
-            {process.map((item) => (
-              <article className="process-item" key={item.number}>
-                <span className="process-number">
-                  {item.number}
-                </span>
-
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TRANSFORMATION */}
-      <section id="resultados" className="transformation section">
-        <div className="container">
-          <div className="transformation-header">
-            <span className="eyebrow">Transformação</span>
-
-            <h2>
-              Do desgaste
-              <span>à renovação.</span>
-            </h2>
-
-            <p>
-              Em breve, esta seção mostrará trabalhos reais da 7 Raízes:
-              o estado inicial, o processo e o resultado final.
-            </p>
-          </div>
-
-          <div className="transformation-grid">
-            <div className="photo-placeholder">
-              <span>01</span>
-              <strong>ANTES</strong>
-              <small>Foto real</small>
-            </div>
-
-            <div className="photo-placeholder">
-              <span>02</span>
-              <strong>PROCESSO</strong>
-              <small>Foto real</small>
-            </div>
-
-            <div className="photo-placeholder photo-placeholder-featured">
-              <span>03</span>
-              <strong>DEPOIS</strong>
-              <small>Foto real</small>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* EXPERIENCE */}
-      <section className="experience section">
-        <div className="container experience-grid">
-          <div className="experience-number">
-            <span>7</span>
-            <small>RAÍZES</small>
-          </div>
-
-          <div className="experience-copy">
-            <span className="eyebrow">Experiência que permanece</span>
-
-            <h2>
-              Madeira não é apenas
-              <span>um acabamento.</span>
-            </h2>
-
-            <p>
-              É parte da história de um ambiente. Nosso objetivo é
-              preservar essa história enquanto recuperamos a presença,
-              o acabamento e a beleza da superfície.
-            </p>
-
-            <p>
-              O resultado não precisa parecer novo.
-              <strong> Precisa parecer bem cuidado.</strong>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* GALLERY */}
-      <section className="gallery section">
-        <div className="container">
-          <div className="gallery-heading">
-            <span className="eyebrow">Trabalhos realizados</span>
-
-            <h2>
-              Madeira real.
-              <span>Resultados reais.</span>
-            </h2>
-          </div>
-
-          <div className="gallery-grid">
-            <div className="gallery-placeholder large">
-              <span>01</span>
-              <strong>PROJETO</strong>
-            </div>
-
-            <div className="gallery-placeholder">
-              <span>02</span>
-              <strong>PROJETO</strong>
-            </div>
-
-            <div className="gallery-placeholder">
-              <span>03</span>
-              <strong>PROJETO</strong>
-            </div>
-
-            <div className="gallery-placeholder wide">
-              <span>04</span>
-              <strong>PROJETO</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section id="contato" className="contact section">
-        <div className="contact-glow" />
-
-        <div className="container contact-inner">
-          <span className="eyebrow">Seu próximo projeto</span>
+        <div className="section-heading">
+          <p className="eyebrow">MADEIRA DE VERDADE</p>
 
           <h2>
-            Seu piso merece
-            <span>uma nova história.</span>
+            Madeira não é apenas acabamento.
+            <br />
+            É parte do ambiente.
           </h2>
 
           <p>
-            Envie algumas fotos do ambiente e conte o que você gostaria
-            de recuperar. Vamos entender o trabalho e orientar os
-            próximos passos.
+            Um piso de madeira bem cuidado transforma a percepção de um espaço.
+            Nosso trabalho é recuperar essa presença, respeitando a madeira,
+            seus detalhes e sua história.
+          </p>
+        </div>
+      </section>
+
+      {/* SERVIÇOS */}
+      <section id="servicos" className="services section">
+        <div className="section-heading">
+          <p className="eyebrow">O QUE FAZEMOS</p>
+          <h2>Cuidado técnico para madeira de verdade.</h2>
+        </div>
+
+        <div className="service-grid">
+          <article className="service-card">
+            <span>01</span>
+            <h3>Raspagem</h3>
+            <p>
+              Remoção controlada de camadas antigas para preparar a madeira
+              para uma nova etapa.
+            </p>
+          </article>
+
+          <article className="service-card">
+            <span>02</span>
+            <h3>Revitalização</h3>
+            <p>
+              Recuperação da aparência da madeira, valorizando textura,
+              desenho e presença do piso.
+            </p>
+          </article>
+
+          <article className="service-card">
+            <span>03</span>
+            <h3>Acabamento</h3>
+            <p>
+              Proteção e acabamento pensados para devolver beleza e valor ao
+              ambiente.
+            </p>
+          </article>
+
+          <article className="service-card">
+            <span>04</span>
+            <h3>Áreas externas</h3>
+            <p>
+              Tratamento e revitalização de superfícies de madeira em áreas
+              externas e decks.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* ANTES / PROCESSO / DEPOIS */}
+      <section className="transformation section">
+        <div className="section-heading">
+          <p className="eyebrow">O PROCESSO</p>
+
+          <h2>
+            O resultado começa
+            <br />
+            muito antes do acabamento.
+          </h2>
+
+          <p>
+            Cada etapa importa. Da preparação da madeira ao acabamento final,
+            o objetivo é recuperar o que o piso tem de melhor.
+          </p>
+        </div>
+
+        <div className="process-grid">
+          <article className="process-card">
+            <div className="process-image">
+              <img
+                src={imagens.antes[0]}
+                alt="Piso de madeira antes da restauração"
+              />
+            </div>
+
+            <div className="process-content">
+              <span>01 • ANTES</span>
+              <h3>O piso como encontramos.</h3>
+              <p>
+                Marcas, desgaste e perda de acabamento fazem parte da história
+                de muitos pisos.
+              </p>
+            </div>
+          </article>
+
+          <article className="process-card">
+            <div className="process-image">
+              <img
+                src={imagens.processo[0]}
+                alt="Processo de raspagem de madeira"
+              />
+            </div>
+
+            <div className="process-content">
+              <span>02 • PROCESSO</span>
+              <h3>Precisão em cada etapa.</h3>
+              <p>
+                A preparação adequada é fundamental para alcançar um resultado
+                uniforme e bem executado.
+              </p>
+            </div>
+          </article>
+
+          <article className="process-card">
+            <div className="process-image">
+              <img
+                src={imagens.depois[0]}
+                alt="Piso de madeira restaurado"
+              />
+            </div>
+
+            <div className="process-content">
+              <span>03 • DEPOIS</span>
+              <h3>Madeira novamente em destaque.</h3>
+              <p>
+                O acabamento devolve ao ambiente a presença e a beleza que a
+                madeira pode oferecer.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* PORTFÓLIO */}
+      <section className="portfolio section">
+        <div className="section-heading">
+          <p className="eyebrow">PROJETOS REALIZADOS</p>
+
+          <h2>Madeira em diferentes espaços.</h2>
+
+          <p>
+            Cada ambiente apresenta desafios diferentes. O trabalho precisa
+            respeitar a madeira e o espaço onde ela está.
+          </p>
+        </div>
+
+        <div className="portfolio-grid">
+          <article className="portfolio-large">
+            <img
+              src={imagens.depois[1]}
+              alt="Piso de madeira restaurado"
+            />
+          </article>
+
+          <article>
+            <img
+              src={imagens.ambientes[0]}
+              alt="Ambiente com piso de madeira"
+            />
+          </article>
+
+          <article>
+            <img
+              src={imagens.escadas[0]}
+              alt="Escada de madeira revitalizada"
+            />
+          </article>
+
+          <article>
+            <img
+              src={imagens.depois[2]}
+              alt="Detalhe de piso de madeira restaurado"
+            />
+          </article>
+
+          <article>
+            <img
+              src={imagens.ambientes[1]}
+              alt="Ambiente com madeira restaurada"
+            />
+          </article>
+        </div>
+      </section>
+
+      {/* ESCADAS */}
+      <section className="feature section">
+        <div className="feature-image">
+          <img
+            src={imagens.escadas[1]}
+            alt="Escada de madeira revitalizada"
+          />
+        </div>
+
+        <div className="feature-content">
+          <p className="eyebrow">DETALHES QUE FAZEM DIFERENÇA</p>
+
+          <h2>A madeira continua sendo o protagonista.</h2>
+
+          <p>
+            Pisos, escadas e outros elementos de madeira podem ganhar uma nova
+            presença quando recebem o cuidado adequado.
           </p>
 
-          <a href="#" className="button button-primary contact-button">
-            Falar pelo WhatsApp
-            <span>→</span>
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+          >
+            Falar sobre meu projeto →
           </a>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="container footer-inner">
-          <div className="footer-brand">
-            <span className="brand-mark">7</span>
+      {/* AUTORIDADE */}
+      <section className="authority section">
+        <div className="section-heading">
+          <p className="eyebrow">POR QUE 7 RAÍZES?</p>
 
-            <div>
-              <strong>RAÍZES PISO NOBRE</strong>
-              <small>
-                Raspagem • Revitalização • Acabamento
-              </small>
-            </div>
+          <h2>Um trabalho que começa pelo cuidado.</h2>
+        </div>
+
+        <div className="authority-grid">
+          <div>
+            <strong>01</strong>
+            <h3>Olhar para a madeira</h3>
+            <p>
+              Cada piso tem características próprias. O processo precisa
+              respeitar essa realidade.
+            </p>
           </div>
 
-          <div className="footer-right">
-            <span>Madeira. Técnica. Cuidado.</span>
-            <span>© 2026 7 Raízes Piso Nobre</span>
+          <div>
+            <strong>02</strong>
+            <h3>Execução cuidadosa</h3>
+            <p>
+              Preparação, raspagem e acabamento fazem parte de um mesmo
+              processo.
+            </p>
+          </div>
+
+          <div>
+            <strong>03</strong>
+            <h3>Resultado que aparece</h3>
+            <p>
+              O objetivo é que a transformação seja percebida assim que você
+              entra no ambiente.
+            </p>
           </div>
         </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="final-cta section">
+        <div>
+          <p className="eyebrow">SEU PISO MERECE UMA NOVA HISTÓRIA</p>
+
+          <h2>
+            Seu piso pode estar mais perto de uma nova vida do que parece.
+          </h2>
+
+          <p>
+            Envie algumas fotos do seu piso pelo WhatsApp e conte um pouco
+            sobre o ambiente. A partir disso, podemos avaliar o projeto.
+          </p>
+
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button-primary"
+          >
+            Enviar fotos pelo WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* RODAPÉ */}
+      <footer className="footer">
+        <div>
+          <strong>7 RAÍZES</strong>
+          <span>PISO NOBRE</span>
+        </div>
+
+        <p>Raspagem • Revitalização • Acabamento</p>
       </footer>
     </main>
   );
