@@ -1,92 +1,228 @@
-export default function Home() {
-  return (
-    <div>
-      {/* Navegação */}
-      <header>
-        <div className="logo font-serif">
-          7 RAÍZES <span>| PISO NOBRE</span>
-        </div>
-        <nav>
-          <a href="#servicos">Serviços</a>
-          <a href="#transformacao">Projetos</a>
-          <a href="#contato">WhatsApp</a>
-        </nav>
-      </header>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
-      {/* Hero Section Split (Layout Idêntico ao Mockup) */}
-      <section className="hero-container">
-        {/* Lado Esquerdo: Imagem da Madeira / Escada */}
-        <div className="hero-bg-image" />
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-        {/* Lado Direito: Texto Moderno e Botões */}
-        <div className="hero-content">
-          <h1 className="hero-title font-serif">
-            A Arte do<br />Piso Nobre
-          </h1>
-          <p className="hero-subtitle">
-            Recuperação, Restauração e Revitalização Premium de Pisos de Madeira.
-          </p>
-          <div>
-            <a 
-              href="https://wa.me/5500000000000" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="btn-main"
-            >
-              Saiba Mais
-            </a>
-            <a 
-              href="https://wa.me/5500000000000" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="btn-secondary-link"
-            >
-              Ou fale no WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
+body {
+  background-color: #FAF8F5;
+  color: #231F20;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
+}
 
-      {/* Serviços Especializados */}
-      <section id="servicos" className="bg-secondary">
-        <div className="section-padding">
-          <h2 className="section-title font-serif">Serviços Especializados</h2>
-          <div className="grid-3">
-            <div style={{ background: '#FAF8F5', padding: '35px', border: '1px solid #E8E2D9' }}>
-              <h3 className="font-serif" style={{ fontSize: '1.2rem', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>01. Raspagem Técnica</h3>
-              <p style={{ fontSize: '0.85rem', color: '#655E5A', fontWeight: 300 }}>Remoção controlada de resíduos antigos e nivelamento preciso da madeira pura.</p>
-            </div>
-            <div style={{ background: '#FAF8F5', padding: '35px', border: '1px solid #E8E2D9' }}>
-              <h3 className="font-serif" style={{ fontSize: '1.2rem', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>02. Revitalização</h3>
-              <p style={{ fontSize: '0.85rem', color: '#655E5A', fontWeight: 300 }}>Tratamento profundo dos veios para restaurar a cor viva e a nobreza natural.</p>
-            </div>
-            <div style={{ background: '#FAF8F5', padding: '35px', border: '1px solid #E8E2D9' }}>
-              <h3 className="font-serif" style={{ fontSize: '1.2rem', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>03. Acabamento Nobre</h3>
-              <p style={{ fontSize: '0.85rem', color: '#655E5A', fontWeight: 300 }}>Aplicação de resinas e vernizes de alta resistência com toque suave e acetinado.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+.font-serif, h1, h2, h3, .logo {
+  font-family: 'Cinzel', serif;
+}
 
-      {/* Antes e Depois */}
-      <section id="transformacao" className="section-padding">
-        <h2 className="section-title font-serif">A Transformação do Piso</h2>
-        <div className="grid-2">
-          <div>
-            <img src="/imagens/antes-piso-01.jpg" alt="Antes" className="card-img" />
-            <div className="card-caption">Antes — Estado Inicial do Piso</div>
-          </div>
-          <div>
-            <img src="/imagens/depois-piso-01.jpg" alt="Depois" className="card-img" />
-            <div className="card-caption" style={{ color: '#5A4234', fontWeight: '600' }}>Depois — Restauração Concluída</div>
-          </div>
-        </div>
-      </section>
+/* Header Sophisticated */
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #E8E2D9;
+  z-index: 90;
+  padding: 16px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-      {/* Rodapé */}
-      <footer id="contato" style={{ padding: '50px 20px', textAlign: 'center', borderTop: '1px solid #E8E2D9', fontSize: '0.75rem', color: '#655E5A', letterSpacing: '1px' }}>
-        © 7 RAÍZES PISO NOBRE — TODOS OS DIREITOS RESERVADOS.
-      </footer>
-    </div>
-  );
+.logo {
+  font-size: 1.1rem;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: #231F20;
+}
+
+.logo span {
+  font-size: 0.75rem;
+  color: #655E5A;
+  font-weight: 300;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+nav a {
+  color: #655E5A;
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* Hero Section Split */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 85vh;
+  background-color: #2C221E; /* Fundo escuro tom madeira de segurança */
+}
+
+.hero-left {
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+}
+
+.hero-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-right {
+  background-color: #FAF8F5;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid #E8E2D9;
+  background-image: radial-gradient(#E8E2D9 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  line-height: 1.15;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #3D352E;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero-sub {
+  color: #655E5A;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #5A4234;
+  color: #FFFFFF;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #433025;
+}
+
+.btn-link {
+  display: block;
+  margin-top: 15px;
+  color: #5A4234;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Seções Gerais */
+.section-padding {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bg-sec {
+  background-color: #F3EFEA;
+  border-top: 1px solid #E8E2D9;
+  border-bottom: 1px solid #E8E2D9;
+}
+
+.sec-title {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.card-item {
+  background: #FAF8F5;
+  border: 1px solid #E8E2D9;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Botão Flutuante WhatsApp (Marrom de Luxo) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #5A4234;
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 999;
+  border: 1px solid #7A5C49;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  background-color: #433025;
+}
+
+.whatsapp-float svg {
+  width: 22px;
+  height: 22px;
+  fill: #FFFFFF;
+}
+
+.whatsapp-float span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+@media (max-width: 850px) {
+  .hero-split { grid-template-columns: 1fr; }
+  .hero-right { padding: 40px 20px; }
+  .hero-title { font-size: 2rem; }
+  nav { display: none; }
 }
