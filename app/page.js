@@ -6,12 +6,6 @@ const imagens = {
     "/imagens/antes-piso-02.jpg",
   ],
 
-  processo: [
-    "/imagens/processo-raspagem.jpg",
-    "/imagens/processo-raspagem-01 .jpg",
-    "/imagens/processo-raspagem-02.jpg",
-  ],
-
   depois: [
     "/imagens/depois-piso.jpg",
     "/imagens/depois-piso-01.jpg",
@@ -98,13 +92,16 @@ export default function Home() {
       <section id="servicos" className="services section">
         <div className="section-heading">
           <p className="eyebrow">O QUE FAZEMOS</p>
+
           <h2>Cuidado técnico para madeira de verdade.</h2>
         </div>
 
         <div className="service-grid">
           <article className="service-card">
             <span>01</span>
+
             <h3>Raspagem</h3>
+
             <p>
               Remoção controlada de camadas antigas para preparar a madeira
               para uma nova etapa.
@@ -113,7 +110,9 @@ export default function Home() {
 
           <article className="service-card">
             <span>02</span>
+
             <h3>Revitalização</h3>
+
             <p>
               Recuperação da aparência da madeira, valorizando textura,
               desenho e presença do piso.
@@ -122,7 +121,9 @@ export default function Home() {
 
           <article className="service-card">
             <span>03</span>
+
             <h3>Acabamento</h3>
+
             <p>
               Proteção e acabamento pensados para devolver beleza e valor ao
               ambiente.
@@ -131,7 +132,9 @@ export default function Home() {
 
           <article className="service-card">
             <span>04</span>
+
             <h3>Áreas externas</h3>
+
             <p>
               Tratamento e revitalização de superfícies de madeira em áreas
               externas e decks.
@@ -140,35 +143,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ANTES / PROCESSO / DEPOIS */}
+      {/* ANTES E DEPOIS */}
       <section className="transformation section">
         <div className="section-heading">
-          <p className="eyebrow">O PROCESSO</p>
+          <p className="eyebrow">A TRANSFORMAÇÃO</p>
 
           <h2>
-            O resultado começa
+            Antes.
             <br />
-            muito antes do acabamento.
+            Depois.
+            <br />
+            A diferença aparece.
           </h2>
 
           <p>
-            Cada etapa importa. Da preparação da madeira ao acabamento final,
-            o objetivo é recuperar o que o piso tem de melhor.
+            Um piso desgastado pode recuperar sua presença. O resultado está
+            nos detalhes da madeira e na transformação do ambiente.
           </p>
         </div>
 
-        <div className="process-grid">
-          <article className="process-card">
-            <div className="process-image">
+        <div className="before-after-grid">
+          <article className="before-after-card">
+            <div className="before-after-image">
               <img
                 src={imagens.antes[0]}
                 alt="Piso de madeira antes da restauração"
               />
             </div>
 
-            <div className="process-content">
+            <div className="before-after-content">
               <span>01 • ANTES</span>
+
               <h3>O piso como encontramos.</h3>
+
               <p>
                 Marcas, desgaste e perda de acabamento fazem parte da história
                 de muitos pisos.
@@ -176,35 +183,19 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="process-card">
-            <div className="process-image">
-              <img
-                src={imagens.processo[0]}
-                alt="Processo de raspagem de madeira"
-              />
-            </div>
-
-            <div className="process-content">
-              <span>02 • PROCESSO</span>
-              <h3>Precisão em cada etapa.</h3>
-              <p>
-                A preparação adequada é fundamental para alcançar um resultado
-                uniforme e bem executado.
-              </p>
-            </div>
-          </article>
-
-          <article className="process-card">
-            <div className="process-image">
+          <article className="before-after-card">
+            <div className="before-after-image">
               <img
                 src={imagens.depois[0]}
-                alt="Piso de madeira restaurado"
+                alt="Piso de madeira depois da restauração"
               />
             </div>
 
-            <div className="process-content">
-              <span>03 • DEPOIS</span>
+            <div className="before-after-content">
+              <span>02 • DEPOIS</span>
+
               <h3>Madeira novamente em destaque.</h3>
+
               <p>
                 O acabamento devolve ao ambiente a presença e a beleza que a
                 madeira pode oferecer.
@@ -214,7 +205,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PORTFÓLIO */}
+      {/* PROJETOS */}
       <section className="portfolio section">
         <div className="section-heading">
           <p className="eyebrow">PROJETOS REALIZADOS</p>
@@ -306,7 +297,9 @@ export default function Home() {
         <div className="authority-grid">
           <div>
             <strong>01</strong>
+
             <h3>Olhar para a madeira</h3>
+
             <p>
               Cada piso tem características próprias. O processo precisa
               respeitar essa realidade.
@@ -315,7 +308,9 @@ export default function Home() {
 
           <div>
             <strong>02</strong>
+
             <h3>Execução cuidadosa</h3>
+
             <p>
               Preparação, raspagem e acabamento fazem parte de um mesmo
               processo.
@@ -324,7 +319,9 @@ export default function Home() {
 
           <div>
             <strong>03</strong>
+
             <h3>Resultado que aparece</h3>
+
             <p>
               O objetivo é que a transformação seja percebida assim que você
               entra no ambiente.
