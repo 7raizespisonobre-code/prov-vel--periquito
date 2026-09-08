@@ -17,7 +17,6 @@ body {
   font-family: 'Cinzel', serif;
 }
 
-/* Header Sophisticated */
 header {
   position: sticky;
   top: 0;
@@ -55,12 +54,11 @@ nav a {
   font-weight: 500;
 }
 
-/* Hero Section Split */
 .hero-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 85vh;
-  background-color: #2C221E; /* Fundo escuro tom madeira de segurança */
+  background-color: #2C221E;
 }
 
 .hero-left {
@@ -104,7 +102,6 @@ nav a {
   font-weight: 300;
 }
 
-/* Botões */
 .btn-primary {
   background-color: #5A4234;
   color: #FFFFFF;
@@ -132,7 +129,6 @@ nav a {
   letter-spacing: 1.5px;
 }
 
-/* Seções Gerais */
 .section-padding {
   padding: 80px 20px;
   max-width: 1200px;
@@ -183,7 +179,6 @@ nav a {
   padding: 20px;
 }
 
-/* Botão Flutuante WhatsApp (Marrom de Luxo) */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -225,4 +220,4 @@ nav a {
   .hero-right { padding: 40px 20px; }
   .hero-title { font-size: 2rem; }
   nav { display: none; }
-}
+    }                        
